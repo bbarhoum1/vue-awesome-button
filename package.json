@@ -1,8 +1,24 @@
 {
   "name": "vue-awsome-button",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-awesome-button.umd.js",
+  "module": "./dist/vue-awesome-button.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-awesome-button.es.js",
+      "require": "./dist/vue-awesome-button.umd.js"
+    },
+    "./dist/vue-awesome-button.css": {
+      "import": "./dist/vue-awesome-button.css",
+      "require": "./dist/vue-awesome-button.css"
+    }
+  },
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -14,8 +30,12 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
+    "path": "^0.12.7",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.3",
     "vue-tsc": "^2.2.8"
   }
 }
