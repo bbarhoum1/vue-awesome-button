@@ -20,6 +20,7 @@ jobs:
       - name: Bump package version
         uses: technote-space/package-version-check-action@v1
       - run: yarn
+      - run: yarn build
       - run: yarn publish --access restricted
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
