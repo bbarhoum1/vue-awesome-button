@@ -1,5 +1,5 @@
 {
-  "name": "@bbarhoum1/vue-awsome-button",
+  "name": "@bbarhoum1/vue-awesome-button",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/test-component.umd.js",
