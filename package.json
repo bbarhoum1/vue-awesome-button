@@ -1,6 +1,5 @@
 {
   "name": "vue-awsome-button",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/test-component.umd.js",
