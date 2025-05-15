@@ -2,14 +2,16 @@
   "name": "@bbarhoum1/vue-awesome-button",
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/vue-awesome-button.umd.js",
+  "main": "./dist/vue-awesome-button.umd.cjs",
   "module": "./dist/vue-awesome-button.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-awesome-button.es.js",
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/vue-awesome-button.js",
       "require": "./dist/vue-awesome-button.cjs"
-    }
+    },
+    "./style.css": "./dist/vue-awesome-button.css"
   },
   "files": [
     "dist",

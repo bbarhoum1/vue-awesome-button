@@ -8,7 +8,15 @@ export default defineConfig(({ mode }) => {
   const isLib = mode === 'lib';
 
   return {
-    plugins: [vue(), dts({ include: ['src/**/*.ts', 'src/**/*.vue'] })],
+    plugins: [
+      vue(),
+      dts({
+        include: ['src/**/*.ts', 'src/**/*.vue'],
+        outDir: 'dist',
+        staticImport: true,
+        insertTypesEntry: true,
+      }),
+    ],
     base: isLib ? '/' : '/vue-awesome-button/', // Base path for GitHub Pages
     build: isLib ? {
       lib: {
