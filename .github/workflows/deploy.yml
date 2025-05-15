@@ -38,8 +38,8 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install
-      - name: Build
-        run: yarn build
+      - name: Build for GitHub Pages
+        run: yarn build:app
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

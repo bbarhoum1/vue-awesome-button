@@ -2,13 +2,13 @@
   "name": "@bbarhoum1/vue-awesome-button",
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/test-component.umd.js",
-  "module": "./dist/test-component.js",
+  "main": "./dist/vue-awesome-button.umd.js",
+  "module": "./dist/vue-awesome-button.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/test-component.esm.js",
-      "require": "./dist/test-component.js"
+      "import": "./dist/vue-awesome-button.es.js",
+      "require": "./dist/vue-awesome-button.cjs"
     }
   },
   "files": [
@@ -25,6 +25,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
+    "build:lib": "vue-tsc -b && vite build --mode lib",
+    "build:app": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
